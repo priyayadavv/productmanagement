@@ -24,17 +24,19 @@ homeTab.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const desc = document.getElementById("desc").value.trim();
+  const productname = document.getElementById("name").value.trim();
+  const description = document.getElementById("desc").value.trim();
   const price = document.getElementById("price").value.trim();
   const status = document.getElementById("status").value.trim();
 
-  if (!name || !desc || !price || !status) {
+  if (!productname || !description || !price || !status) {
     alert("Please fill all fields!");
     return;
   }
 
-  const product = { name, desc, price, status };
+  const product = { productname, description, price, status };
+  // console.warn(product)
+  console.log(product)
 
   fetch(apiUrl, {
     method: "POST",
@@ -47,6 +49,7 @@ form.addEventListener("submit", (e) => {
       form.reset();
       formContainer.style.display = "none";
       tableContainer.style.display = "block";
+      console.warn(product)
     })
     .catch((err) => console.error("Error adding product:", err));
 });
@@ -99,8 +102,8 @@ function renderProducts(products) {
     const row = document.createElement("div");
     row.innerHTML = `
       <li>${index + 1}</li>
-      <li>${p.name}</li>
-      <li>${p.desc}</li>
+      <li>${p.productname}</li>
+      <li>${p.description}</li>
       <li>${p.price}</li>
       <li>${p.status}</li>
       <li><button class="delete-btn" data-id="${p.id}">Delete</button></li>
