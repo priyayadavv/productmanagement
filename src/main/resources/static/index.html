@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product ManageMent</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="left">
+        <li class="tab pm">PM</li>
+      </div>
+      <div class="right">
+        <li class="tab home">Home</li>
+        <li class="tab add-product">Add product</li>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div class="form-container">
+      <form action="" method="post" class="form">
+        <div class="heading">Add Products</div>
+        <div class="field">
+          <label for="name" class="namelebel">Product Name</label>
+          <input
+            class="nameinput"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="enter product name"
+          />
+        </div>
+        <div class="field">
+          <label for="desc" class="namelebel">Product description</label>
+          <input
+            class="nameinput"
+            type="text"
+            name="desc"
+            id="desc"
+            placeholder="enter product desc"
+          />
+        </div>
+        <div class="field">
+          <label for="price" class="namelebel">Product price</label>
+          <input
+            class="nameinput"
+            type="text"
+            name="price"
+            id="price"
+            placeholder="enter product price"
+          />
+        </div>
+        <div class="field">
+          <label for="status" class="namelebel">Product status</label>
+          <input
+            class="nameinput"
+            type="text"
+            name="status"
+            id="status"
+            placeholder="enter product status"
+          />
+        </div>
+        <button type="submit" class="addbtn">Add product</button>
+      </form>
+    </div>
+
+    <div class="table-container" style="display: none">
+      <div class="product-table">Product Lists</div>
+      <div class="products">
+        <div>
+          <li>S.NO</li>
+          <li>Product name</li>
+          <li>Description</li>
+          <li>Price</li>
+          <li>Status</li>
+          <li>Action</li>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <script src="script.js"></script>
+  </body>
+</html>

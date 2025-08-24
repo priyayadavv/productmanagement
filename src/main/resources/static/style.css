@@ -1,0 +1,156 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b; /* dark slate */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .left .tab,
+.navbar .right .tab {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navbar .tab a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .tab:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .heading {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.namelebel {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #334155;
+}
+
+.nameinput {
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nameinput:focus {
+  outline: none;
+  border-color: #2563eb; /* blue */
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+.addbtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.addbtn:hover {
+  background-color: #1e40af; /* darker blue */
+}
+
+
+/* Product table heading */
+.product-table {
+  max-width: 800px;
+  margin: 30px auto 10px auto;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+/* Product list container */
+.products {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f8fafc;
+}
+
+/* Each row */
+.products > div {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr 120px 100px 120px; /* adjust widths */
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Head row */
+.products > div:first-child {
+  background-color: #1e293b;
+  color: white;
+  font-weight: bold;
+}
+
+/* Cells */
+.products li {
+  list-style: none;
+  padding: 5px;
+  font-size: 14px;
+  color: #334155;
+}
+
+/* Alternate row background */
+.products > div:nth-child(even):not(:first-child) {
+  background-color: #f1f5f9;
+}
+
+/* Hover effect */
+.products > div:hover:not(:first-child) {
+  background-color: #e0f2fe;
+}
+
+
+
